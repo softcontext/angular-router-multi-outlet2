@@ -1,0 +1,20 @@
+<div class="bs-example">
+  <nav>
+    <div class="nav-wrapper">
+      <a [routerLink]="['']" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a [routerLink]="['home']">Home Screen</a>
+        </li>
+        <li>
+          <a [routerLink]="['/second', {outlets: {firstOutlet: ['a'], secondOutlet: ['b']}}]">Second Screen</a>
+        </li>
+        <li>
+          <a [routerLink]="['/third', {outlets: {firstOutlet: ['c'], secondOutlet: ['0']}}]">Third Screen</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
